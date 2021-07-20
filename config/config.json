@@ -1,0 +1,18 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/spfx-build/config.2.0.schema.json",
+  "version": "2.0",
+  "bundles": {
+    "webpart-listusers-web-part": {
+      "components": [
+        {
+          "entrypoint": "./lib/webparts/webpartListusers/WebpartListusersWebPart.js",
+          "manifest": "./src/webparts/webpartListusers/WebpartListusersWebPart.manifest.json"
+        }
+      ]
+    }
+  },
+  "externals": {},
+  "localizedResources": {
+    "WebpartListusersWebPartStrings": "lib/webparts/webpartListusers/loc/{locale}.js"
+  }
+}
