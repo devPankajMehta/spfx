@@ -13,6 +13,7 @@ import { IWebpartListusersProps } from './components/IWebpartListusersProps';
 
 export interface IWebpartListusersWebPartProps {
   description: string;
+  title:string
 }
 
 export default class WebpartListusersWebPart extends BaseClientSideWebPart<IWebpartListusersWebPartProps> {
@@ -21,7 +22,8 @@ export default class WebpartListusersWebPart extends BaseClientSideWebPart<IWebp
     const element: React.ReactElement<IWebpartListusersProps> = React.createElement(
       WebpartListusers,
       {
-        description: this.properties.description
+        description: this.properties.description,
+        title:this.properties.title
       }
     );
 
@@ -49,6 +51,9 @@ export default class WebpartListusersWebPart extends BaseClientSideWebPart<IWebp
               groupFields: [
                 PropertyPaneTextField('description', {
                   label: strings.DescriptionFieldLabel
+                }),
+                PropertyPaneTextField('title', {
+                  label: "title"
                 })
               ]
             }
